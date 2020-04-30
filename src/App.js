@@ -5,7 +5,7 @@ import DockMac from './Assets/Images/DockMac.jpg'
 function App() {
   return (
     <div>
-      <img className="splashImage" src={DockMac}/>
+      <img className="splashImage" src={DockMac} alt="Hello World!"/>
     </div>
   );
 }
