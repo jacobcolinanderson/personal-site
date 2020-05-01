@@ -1,4 +1,10 @@
-.splashImage{
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   width: 100%;
-  height: auto;
+  background-image: url(./Assets/Images/DockMac.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
