@@ -52,6 +52,8 @@ function App() {
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
+          if(newValue === 0)
+            window.open("mailto:jacob.colin.anderson@icloud.com")
           if(newValue === 1)
             window.open("https://www.linkedin.com/in/jacobcolinanderson/")
           if(newValue === 2)
@@ -61,10 +63,10 @@ function App() {
         showLabels
         className={classes.bottomNav}
       >
-        <BottomNavigationAction value={0} icon={<MailOutline className={classes.icon}/>} />
-        <BottomNavigationAction value={1} icon={<LinkedIn className={classes.icon}/>} />
-        <BottomNavigationAction value={2} icon={<Instagram className={classes.icon}/>} />
-    </BottomNavigation>
+          <BottomNavigationAction value={0} icon={<MailOutline className={classes.icon}/>} />
+          <BottomNavigationAction value={1} icon={<LinkedIn className={classes.icon}/>} />
+          <BottomNavigationAction value={2} icon={<Instagram className={classes.icon}/>} />
+      </BottomNavigation>
     </div>
     
   );
