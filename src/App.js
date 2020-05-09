@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import clsx from 'clsx';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,45 +14,59 @@ import Dialog from '@material-ui/core/Dialog';
 import Fab from '@material-ui/core/Fab'
 import Card from '@material-ui/core/Card'
 import AboutMe from './Components/AboutMe'
+import WxLogger from './Components/WxLogger';
 
 const useStyles = makeStyles({
-  appBar: {
+  heroAppBar: {
     background: "transparent",
     boxShadow: "none",
+  },
+  appBar: {
+    background: "white",
+    boxShadow: "none",
+  },
+  heroBottomNav:{
+    position: "fixed",
+    bottom: 0,
+    width: "100%",
+    background: "transparent"
   },
   bottomNav: {
     position: "fixed",
     bottom: 0,
-    background: "transparent",
     width: "100%",
+    background: "white"
+  },
+  heroIcon:{
+    width: 30,
+    height: 30,
+    color: "white"
   },
   icon: {
     width: 30,
     height: 30,
-    color: "white"
+    color: "black"
   },
   content: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    paddingBottom: "55px"
   },
   dialog:{
     backgroundColor: "white",  
     padding: "15px",
   },
   card:{
-    marginTop: "60px",
-    maxWidth: "93%",
-    //backgroundColor: "white",
-    //display: "inline-block",
-    maxHeight: "calc(100vh - 120px)",
-    overflowY: "scroll",
-  },  
+    marginTop: "55px",
+    height: "calc(100vh - 110px)",
+    overflowY: "scroll"
+  },
   button:{
     width: "200px",
     margin: "10px",
-    color: "white",
-    backgroundColor: "#a7d4db",
+    color: "black",
+    backgroundColor: "white",
   }
 });
 
@@ -60,8 +75,9 @@ function App() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [open, setOpen] = React.useState(false)
+  const [home, setHome] = React.useState(false)
   
-  const handleClick = () => {
+  const handleClick = (event) => {
     setOpen(!open)
   }
 
@@ -71,8 +87,7 @@ function App() {
         <AppBar 
           position="fixed" 
           color="inherit"
-          className={classes.appBar}
-        >
+          className={clsx(classes.heroAppBar, {[classes.appBar]: home})}>
           <Toolbar>
               <IconButton 
                 edge="start" 
@@ -80,12 +95,13 @@ function App() {
                 aria-label="menu" 
                 onClick={handleClick}
               > 
-                  <MenuIcon className={classes.icon} />
+                  <MenuIcon className={clsx(classes.heroIcon, {[classes.icon]: home})} />
               </IconButton>
           </Toolbar>
         </AppBar>
         <Card className={classes.card}>
             <Route path="/aboutme" component={AboutMe}/>
+            <Route path="/wxlogger" component={WxLogger}/>
         </Card>
         <BottomNavigation
           value={value}
@@ -101,18 +117,18 @@ function App() {
             setValue(newValue);
           }}
           showLabels
-          className={classes.bottomNav}
+          className={clsx(classes.heroBottomNav, {[classes.bottomNav]: home})}
         >
-            <BottomNavigationAction value={0} icon={<MailOutline className={classes.icon}/>} />
-            <BottomNavigationAction value={1} icon={<LinkedIn className={classes.icon}/>} />
-            <BottomNavigationAction value={2} icon={<Instagram className={classes.icon}/>} />
-            <BottomNavigationAction value={3} icon={<GitHub className={classes.icon}/>} />
+            <BottomNavigationAction value={0} icon={<MailOutline className={clsx(classes.heroIcon, {[classes.icon]: home})}/>} />
+            <BottomNavigationAction value={1} icon={<LinkedIn className={clsx(classes.heroIcon, {[classes.icon]: home})}/>} />
+            <BottomNavigationAction value={2} icon={<Instagram className={clsx(classes.heroIcon, {[classes.icon]: home})}/>} />
+            <BottomNavigationAction value={3} icon={<GitHub className={clsx(classes.heroIcon, {[classes.icon]: home})}/>} />
         </BottomNavigation>
-        <Dialog onClose={handleClick} aria-labelledby="simple-dialog-title" open={open}>
+        <Dialog onClose={handleClick} open={open}>
           <Card className={classes.dialog}>
-            <Fab component={Link} onClick={handleClick} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
+            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
             <br/>
-            <Fab component={Link} onClick={handleClick} to="/wxlogger" key={1} variant="contained" size="large" className={classes.button}>Wx Logger</Fab>
+            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/wxlogger" key={2} variant="extended" className={classes.button}>Wx Logger</Fab>
           </Card>
         </Dialog>
       </Router>
