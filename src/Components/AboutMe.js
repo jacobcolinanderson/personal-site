@@ -7,17 +7,25 @@ import CardContent from '@material-ui/core/CardContent';
 import Pretzel from '../Assets/Images/Pretzel.png'
 
 const useStyles = makeStyles({
+    root:{
+        width: "100%"
+    },
     title:{
         textAlign: "center",
         fontFamily: "'Amatic SC', cursive",
     },
     biography:{
-        margin: "20px"
+        paddingTop:"20px",
+        textAlign: "center",
+        margin: "auto",
+        fontFamily: "'Oswald', sans-serif",
     },
     image:{
         borderRadius: "5px",
         display: "block",
-        margin: 'auto'
+        margin: 'auto',
+        width: "100%",
+        maxWidth: "350px"
     }
   });
 
@@ -42,11 +50,10 @@ function AboutMe(){
                     <Typography variant="h2" className={classes.title}>
                         <Box fontWeight="fontWeightBold">Hello, I'm Jacob Anderson</Box>
                     </Typography>
-                    <div className={classes.biography}>
-                        <Typography variant="p">
-                            I'm baby paleo YOLO cloud bread pok pok typewriter gluten-free organic flexitarian. Salvia poutine photo booth keffiyeh ennui, freegan cloud bread iceland occupy pour-over. Cloud bread flannel unicorn listicle ugh whatever stumptown venmo wayfarers viral chicharrones distillery tumblr occupy single-origin coffee. Godard leggings humblebrag chartreuse thundercats tacos art party deep v iceland hashtag roof party quinoa kickstarter keffiyeh. Cray vape fam whatever quinoa locavore, vice brooklyn glossier kitsch affogato you probably haven't heard of them la croix. Poke disrupt pinterest hexagon fam humblebrag.
-                        </Typography>
-                    </div>                    
+                    <Typography variant="h6" className={classes.title}>
+                        <Box fontWeight="fontWeightBold">human-cyborg relations</Box>
+                    </Typography>
+                                    
                 </Grid>
                 <Grid item
                     xl={4}
@@ -58,6 +65,11 @@ function AboutMe(){
                     <img className={classes.image} src={Pretzel} alt="me"/>
                 </Grid>
             </Grid>
+            <div>
+                        <Typography variant="body1" className={classes.biography}>
+                            I'm baby paleo YOLO cloud bread pok pok typewriter gluten-free organic flexitarian. Salvia poutine photo booth keffiyeh ennui, freegan cloud bread iceland occupy pour-over. Cloud bread flannel unicorn listicle ugh whatever stumptown venmo wayfarers viral chicharrones distillery tumblr occupy single-origin coffee. Godard leggings humblebrag chartreuse thundercats tacos art party deep v iceland hashtag roof party quinoa kickstarter keffiyeh. Cray vape fam whatever quinoa locavore, vice brooklyn glossier kitsch affogato you probably haven't heard of them la croix. Poke disrupt pinterest hexagon fam humblebrag.
+                        </Typography>
+                    </div>    
                 
             </CardContent>
         </div>
