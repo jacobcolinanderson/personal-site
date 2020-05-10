@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Pretzel from '../Assets/Images/Pretzel.JPG'
 import Resume from '../Assets/Files/JacobAnderson-Resume.pdf'
 import Fab from '@material-ui/core/Fab'
-import Tooltip from "@material-ui/core/Tooltip"
 import {FaReact, FaJs, FaHtml5, FaCss3, FaSwift, FaGitAlt, FaAngular} from 'react-icons/fa'
 import cSharp from '../Assets/Images/cSharp.png'
 import sql from '../Assets/Images/sql.png'
@@ -61,7 +60,7 @@ const useStyles = makeStyles({
         color: "black"
     },
     break:{
-        height: "10px"
+        height: "7px"
     },
 
   });
@@ -93,9 +92,13 @@ function AboutMe(){
                         <Typography variant="body1" className={classes.biography}>
                             Jake grew up in Denver, CO and graduated from Fort Lewis College in Durango, CO in 2012 with a B.A. in Spanish and minor in French. He spent five years as a Program Director for First Descents, a nonprofit organization that provides free outdoor adventures for young adults (ages 18-39) impacted by cancer and other serious health conditions. Jake joined Beaver Creek Ski Patrol in 2013, completed his AIARE Level III course in 2015 and became Beaver Creek’s Assistant Director of Snow Safety in 2016. 
                             <div className={classes.break}/>
-                            To pursue his then growing passion for web development, Jake went back to school in 2017 and started working for Inntopia in Edwards, CO in early 2018. As a developer at Inntopia, he worked on ????
-                            <div className={classes.break}/>
-                            Jake Anderson is the founder of WxLogger.net, an online weather data collection system and user interface that comprehensively interacts with and interprets metrics from his custom-built weather stations.
+                            To pursue his then growing passion for web development, Jake went back to school in 2017 and started working for Inntopia in Edwards, CO in early 2018. As a developer at Inntopia Jake,
+                            <ul>
+                                <li>Designed and implemented tooling that reduced time to billing for new clients</li>
+                                <li>Added new functionalities using Angular Elements to existing MVC application</li>
+                                <li>Quickly resolved high priority bugs and issues</li>
+                            </ul>
+                            Jake Anderson is the founder of WxLogger.net, a web based solution for ski areas, guiding operations and avalanche centers to track current and historical weather data. <a href="/wxlogger">Learn More</a>
                             <div className={classes.break}/>
                             An avid outdoorsman, Jake loves skiing, mountain biking, kayaking and photography, and hiking when his fiancé and dog make him. He also loves traveling, and has been lucky enough to spend time in some incredible places, including: Japan, Indonesia, Cambodia, Georgia, Turkey, Kyrgyzstan, France, Germany, Switzerland, Spain, Cuba and Costa Rica. 
                             <div className={classes.break}/>
@@ -116,9 +119,7 @@ function AboutMe(){
                     </Grid>
                 </Grid>
                 <div className={classes.iconBar}>
-                    <Tooltip title="React">
-                        <FaReact className={classes.devIcons}/>
-                    </Tooltip>
+                    <FaReact className={classes.devIcons}/>
                     <FaJs className={classes.devIcons}/>
                     <img src={cSharp} alt="cSharp" className={classes.devIcons}/>
                     <img src={sql} alt="sql" className={classes.devIcons}/>
