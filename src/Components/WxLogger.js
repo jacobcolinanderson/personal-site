@@ -9,6 +9,8 @@ import WxDiagram from '../Assets/Images/WxLoggerDiagram.png'
 const useStyles = makeStyles({
     root:{
         width: "100vw",
+        minHeight: '100vh',
+        backgroundColor: "white"
     },
     title:{
         textAlign: "center",
@@ -34,10 +36,10 @@ function WxLogger(){
     return(
         <div className={classes.root}>
             <CardContent>
-                <Typography variant="h2" className={classes.title}>
+                <Typography variant="h1" className={classes.title}>
                     <Box fontWeight="fontWeightBold">Wx Logger</Box>
                 </Typography>
-                <Typography variant="h6" className={classes.title}>
+                <Typography variant="h5" className={classes.title}>
                     <Box fontWeight="fontWeightBold">real-time weather data by ski professionals for ski professionals</Box>
                 </Typography>
                 <Grid container
