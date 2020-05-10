@@ -13,6 +13,7 @@ import {MailOutline, LinkedIn, Instagram, GitHub} from '@material-ui/icons';
 import Dialog from '@material-ui/core/Dialog';
 import Fab from '@material-ui/core/Fab'
 import Card from '@material-ui/core/Card'
+import Home from './Components/Home'
 import AboutMe from './Components/AboutMe'
 import WxLogger from './Components/WxLogger';
 
@@ -51,22 +52,25 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: "55px"
+    paddingBottom: "55px",
   },
   dialog:{
-    backgroundColor: "white",  
+    backgroundColor: "transparent",  
     padding: "15px",
   },
   card:{
     marginTop: "55px",
     height: "calc(100vh - 110px)",
-    overflowY: "scroll"
+    overflowY: "scroll",
+    backgroundColor: "transparent",
+    boxShadow: "none",
   },
   button:{
     width: "200px",
     margin: "10px",
     color: "black",
     backgroundColor: "white",
+    fontFamily: "'Oswald', sans-serif",
   }
 });
 
@@ -100,6 +104,7 @@ function App() {
           </Toolbar>
         </AppBar>
         <Card className={classes.card}>
+            <Route exact path="/" component={Home}/>
             <Route path="/aboutme" component={AboutMe}/>
             <Route path="/wxlogger" component={WxLogger}/>
         </Card>
@@ -126,6 +131,8 @@ function App() {
         </BottomNavigation>
         <Dialog onClose={handleClick} open={open}>
           <Card className={classes.dialog}>
+            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(false)}} to="/" key={0} variant="extended" className={classes.button}>Home</Fab>
+            <br/>
             <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
             <br/>
             <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/wxlogger" key={2} variant="extended" className={classes.button}>Wx Logger</Fab>
