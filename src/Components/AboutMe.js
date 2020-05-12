@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import CardContent from '@material-ui/core/CardContent';
 import Pretzel from '../Assets/Images/Pretzel.JPG'
-import Resume from '../Assets/Files/JacobAnderson-Resume.pdf'
+import Resume from '../Assets/Files/JakeResume.pdf'
 import Fab from '@material-ui/core/Fab'
 import {FaReact, FaJs, FaHtml5, FaCss3, FaSwift, FaGitAlt, FaAngular} from 'react-icons/fa'
 import cSharp from '../Assets/Images/cSharp.png'
