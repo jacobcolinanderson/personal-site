@@ -15,7 +15,7 @@ import Fab from '@material-ui/core/Fab'
 import Card from '@material-ui/core/Card'
 import Home from './Components/Home'
 import AboutMe from './Components/AboutMe'
-import WxLogger from './Components/WxLogger';
+import TelemetryStream from './Components/TelemetryStream';
 
 const useStyles = makeStyles({
   heroAppBar: {
@@ -106,7 +106,7 @@ function App() {
         <Card className={classes.card}>
             <Route exact path="/" component={Home}/>
             <Route path="/aboutme" component={AboutMe}/>
-            <Route path="/wxlogger" component={WxLogger}/>
+            <Route path="/telemetrystream" component={TelemetryStream}/>
         </Card>
         <BottomNavigation
           value={value}
@@ -135,7 +135,7 @@ function App() {
             <br/>
             <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
             <br/>
-            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/wxlogger" key={2} variant="extended" className={classes.button}>Wx Logger</Fab>
+            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/telemetrystream" key={2} variant="extended" className={classes.button}>Telemetry Stream</Fab>
           </Card>
         </Dialog>
       </Router>

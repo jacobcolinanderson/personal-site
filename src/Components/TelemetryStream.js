@@ -10,18 +10,24 @@ const useStyles = makeStyles({
     root:{
         width: "100vw",
         minHeight: '100vh',
-        backgroundColor: "white"
+        backgroundColor: "white",
+        textAlign: "center"
     },
     title:{
         textAlign: "center",
         fontFamily: "'Amatic SC', cursive",
+    },
+    subTitle:{
+        textAlign: "center",
+        fontFamily: "'Amatic SC', cursive",
+        color: "#5ec6cc"
     },
     image:{
         borderRadius: "5px",
         display: "block",
         margin: 'auto',
         width: '90%',
-        maxWidth: '700px',
+        maxWidth: '600px',
         padding: "20px",
         paddingTop: "50px"
     },
@@ -29,7 +35,7 @@ const useStyles = makeStyles({
         fontFamily: "'Oswald', sans-serif",
     }
 })
-function WxLogger(){
+function TelemetryStream(){
 
     const classes = useStyles();
     
@@ -37,12 +43,16 @@ function WxLogger(){
         <div className={classes.root}>
             <CardContent>
                 <Typography variant="h1" className={classes.title}>
-                    <Box fontWeight="fontWeightBold">Wx Logger</Box>
+                    <Box fontWeight="fontWeightBold">Telemetry Stream</Box>
                 </Typography>
-                <Typography variant="h5" className={classes.title}>
-                    <Box fontWeight="fontWeightBold">real-time weather data by ski professionals for ski professionals</Box>
+                <Typography variant="h5" className={classes.subTitle}>
+                    <Box fontWeight="fontWeightBold">real-time sensor data by ski professionals for ski professionals</Box>
                 </Typography>
-                <Grid container
+                <img src={WxDiagram} alt="Weather Diagram" className={classes.image}/>
+                <Typography variant="body1" className={classes.description}>
+                    Telemetry Stream is a web based solution for ski areas, guiding operations and avalanche centers to track current and historical weather data. 
+                </Typography>
+                {/* <Grid container
                     spacing={1}
                     alignItems="center"
                     justify="center"
@@ -68,10 +78,10 @@ function WxLogger(){
                             Wx Logger [WIX - LOGGER] is a web based solution for ski areas, guiding operations and avalanche centers to track current and historical weather data. 
                         </Typography>
                     </Grid>
-                </Grid>
+                </Grid> */}
             </CardContent>
         </div>
     )
 }
 
-export default WxLogger
+export default TelemetryStream
