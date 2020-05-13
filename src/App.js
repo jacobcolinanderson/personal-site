@@ -60,8 +60,8 @@ const useStyles = makeStyles({
   },
   card:{
     marginTop: "55px",
-    height: "calc(100vh - 110px)",
-    overflowY: "scroll",
+    //height: "calc(100vh - 110px)",
+    //overflowY: "scroll",
     backgroundColor: "transparent",
     boxShadow: "none",
   },
@@ -75,7 +75,6 @@ const useStyles = makeStyles({
 });
 
 function App() {
-
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [open, setOpen] = React.useState(false)
@@ -130,13 +129,15 @@ function App() {
             <BottomNavigationAction value={3} icon={<GitHub className={clsx(classes.heroIcon, {[classes.icon]: home})}/>} />
         </BottomNavigation>
         <Dialog onClose={handleClick} open={open}>
-          <Card className={classes.dialog}>
-            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(false)}} to="/" key={0} variant="extended" className={classes.button}>Home</Fab>
-            <br/>
-            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
-            <br/>
-            <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/telemetrystream" key={2} variant="extended" className={classes.button}>Telemetry Stream</Fab>
-          </Card>
+          <div>
+            <Card className={classes.dialog}>
+              <Fab component={Link} onClick={function(event){setOpen(!open); setHome(false)}} to="/" key={0} variant="extended" className={classes.button}>Home</Fab>
+              <br/>
+              <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
+              <br/>
+              <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/telemetrystream" key={2} variant="extended" className={classes.button}>Telemetry Stream</Fab>
+            </Card>
+          </div>
         </Dialog>
       </Router>
     </div>
