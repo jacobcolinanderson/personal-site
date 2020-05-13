@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
@@ -75,6 +75,10 @@ const useStyles = makeStyles({
   });
 
 function AboutMe(){
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     const classes = useStyles();
     return(
         <div className={classes.root}>
@@ -99,13 +103,13 @@ function AboutMe(){
                         </Typography>
                         <Typography variant="body1" className={classes.biography}>
                             Jake grew up in Denver, CO and graduated from Fort Lewis College in Durango, CO in 2012 with a B.A. in Spanish and minor in French. He spent five years as a Program Director for First Descents, a nonprofit organization that provides free outdoor adventures for young adults (ages 18-39) impacted by cancer and other serious health conditions. Jake joined Beaver Creek Ski Patrol in 2013, completed his AIARE Level III course in 2015 and became Beaver Creek’s Assistant Director of Snow Safety in 2016. 
-                            <div className={classes.break}/>
+                            <br/>
                             To pursue his then growing passion for web development, Jake went back to school in 2017 and started working for Inntopia in Edwards, CO in early 2018. As a developer at Inntopia Jake, designed and implemented tooling that reduced time to billing for new clients, added new functionalities using Angular Elements to existing MVC application, and quickly resolved high priority bugs and issues.
-                            <div className={classes.break}/>
+                            <br/>
                             Jake Anderson is the founder of Telemetry Stream, a web based solution for ski areas, guiding operations and avalanche centers to track current and historical sensor and observation data. <Link to="/telemetrystream">Learn More</Link>
-                            <div className={classes.break}/>
+                            <br/>
                             An avid outdoorsman, Jake loves skiing, mountain biking, kayaking and photography, and hiking when his fiancé and dog make him. He also loves traveling, and has been lucky enough to spend time in some incredible places, including: Japan, Indonesia, Cambodia, Georgia, Turkey, Kyrgyzstan, France, Italy, UK, Austria, Germany, Switzerland, Spain, Cuba and Costa Rica. 
-                            <div className={classes.break}/>
+                            <br/>
                             Jake is a passionate, versatile, and innovative individual that loves a good challenge and a good time. He is always looking to learn and apply his passion and skills to new projects, so please get in touch!
                         </Typography>
                     </Grid>

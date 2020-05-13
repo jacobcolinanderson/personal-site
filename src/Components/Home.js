@@ -5,13 +5,13 @@ import Box from '@material-ui/core/Box'
 
 const useStyles = makeStyles({
     root:{
-        borderColor: "white",
-        borderStyle: "solid",
+        //borderColor: "white",
+        //borderStyle: "solid",
         marginLeft: "10px",
         marginRight: "10px",
         top: "25%",
         position: "relative",
-        backdropFilter: "blur(20px) brightness(90%)",
+        //backdropFilter: "blur(20px) brightness(90%)",
     },
     title:{
         textAlign: "center",
