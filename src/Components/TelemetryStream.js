@@ -90,9 +90,9 @@ function TelemetryStream(){
                         <Typography variant="body1" className={classes.description}>
                             Telemetry Stream is a web based solution for ski areas, guiding operations and avalanche centers to track current and historical weather data.
                             <br/><br/>
-                            This system is designed so that it can be used with existing sensors and hardware and modified to connect to Telemetry Stream either by calling out APIs directly from your data-loggers or processed by our Windows application on your system. If you dont have existing hardware we can build a station to your specifications and install it almost anywhere on the globe. Standard installs poll the sensors every ten seconds and are avaiable nearly intsantaniously. 
+                            This system is designed so that it can be used with existing hardware by calling our APIs directly from or processed by our Windows application on your system. If you don’t have existing hardware we can build a station to your specifications and install it almost anywhere. Once sensor data enters our system it is made available instantly, providing professionals actionable data with up to the second resolution.
                             <br/><br/>
-                            We provide many different options ranging from colleciton and storage of your data in our SQL databases all the way through to data systhesis and analysis on our web based platform.
+                            We provide many different options ranging from collection and storage of your data in our SQL databases all the way through to data systhesis and analysis on our web based platform.
                             <br/><br/>
                         </Typography>
                         
