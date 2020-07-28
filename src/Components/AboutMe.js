@@ -163,12 +163,12 @@ function AboutMe(){
                             CSS3
                         </Typography>
                     </div>
-                    <div className={classes.iconWrapper}>
+                    {/* <div className={classes.iconWrapper}>
                         <FaSwift className={classes.devIcons}/>
                         <Typography variant="body2" className={classes.iconLabel}>
                             Swift
                         </Typography>
-                    </div>
+                    </div> */}
                     <div className={classes.iconWrapper}>
                         <FaGitAlt className={classes.devIcons}/>
                         <Typography variant="body2" className={classes.iconLabel}>
