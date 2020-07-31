@@ -135,7 +135,7 @@ function App() {
               <br/>
               <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/aboutme" key={1} variant="extended" className={classes.button}>About Me</Fab>
               <br/>
-              <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/telemetrystream" key={2} variant="extended" className={classes.button}>Telemetry Stream</Fab>
+              {/* <Fab component={Link} onClick={function(event){setOpen(!open); setHome(true)}} to="/telemetrystream" key={2} variant="extended" className={classes.button}>Telemetry Stream</Fab> */}
             </Card>
           </div>
         </Dialog>

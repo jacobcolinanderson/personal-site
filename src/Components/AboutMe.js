@@ -106,7 +106,7 @@ function AboutMe(){
                             <br/>
                             To pursue his then growing passion for web development, Jake went back to school in 2017 and started working for Inntopia in Edwards, CO in early 2018. As a developer at Inntopia Jake, designed and implemented tooling that reduced time to billing for new clients, added new functionalities using Angular Elements to existing MVC application, and quickly resolved high priority bugs and issues.
                             <br/>
-                            Jake Anderson is the founder of Telemetry Stream, a web based solution for ski areas, guiding operations and avalanche centers to track current and historical sensor and observation data. <Link to="/telemetrystream">Learn More</Link>
+                            Jake Anderson one of the first developers at Telemetry Stream, a web based solution for ski areas, guiding operations and avalanche centers to track current and historical sensor and observation data. 
                             <br/>
                             An avid outdoorsman, Jake loves skiing, mountain biking, kayaking and photography, and hiking when his fiancé and dog make him. He also loves traveling, and has been lucky enough to spend time in some incredible places, including: Japan, Indonesia, Cambodia, Georgia, Turkey, Kyrgyzstan, France, Italy, UK, Austria, Germany, Switzerland, Spain, Cuba and Costa Rica. 
                             <br/>
